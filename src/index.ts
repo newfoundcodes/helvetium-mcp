@@ -37,3 +37,4 @@ export * from './apps.js';
 export * from './transport/http.js';
 export * from './transport/stdio.js';
 export * from './integration/boot.js';
+export type { AuthorizationServerMetadata, LineReadable, LineWritable } from './types/public.js';
