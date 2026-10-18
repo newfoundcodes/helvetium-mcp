@@ -53,13 +53,6 @@ interface MCPHTTPClientOptions {
   cachePartition?: string;
 }
 
-interface LineReadable extends AsyncIterable<string | Uint8Array> {}
-
-interface LineWritable {
-  write(chunk: string | Uint8Array): unknown;
-  end?(): unknown;
-}
-
 interface MCPStdioServerOptions {
   onError?: (error: unknown) => void;
 }
