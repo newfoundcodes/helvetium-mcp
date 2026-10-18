@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": "..",
+    "paths": {
+      "@newfoundcodes/helvetium-mcp": ["./src/index.ts"],
+      "@newfoundcodes/helvetium-mcp/*": ["./src/*"],
+      "@newfoundcodes/helvetium-boot": ["../helvetium-boot/src/index.ts"]
+    }
+  },
+  "include": ["./*.ts", "../src/types/**/*.d.ts", "../type/**/*.d.ts"]
+}
