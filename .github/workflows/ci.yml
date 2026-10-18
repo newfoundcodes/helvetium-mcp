@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  node:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: helvetium-mcp
+      - uses: actions/checkout@v4
+        with:
+          repository: newfoundcodes/helvetium-boot
+          path: helvetium-boot
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install --ignore-scripts
+        working-directory: helvetium-boot
+      - run: npm run build
+        working-directory: helvetium-boot
+      - run: npm install --ignore-scripts
+        working-directory: helvetium-mcp
+      - run: npm run typecheck
+        working-directory: helvetium-mcp
+      - run: npm test
+        working-directory: helvetium-mcp
+      - run: npm run examples:test
+        working-directory: helvetium-mcp
