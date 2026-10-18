@@ -32,19 +32,6 @@ interface ProtectedResourceMetadata {
   [key: string]: unknown;
 }
 
-interface AuthorizationServerMetadata {
-  issuer: string;
-  authorization_endpoint: string;
-  token_endpoint: string;
-  registration_endpoint?: string;
-  code_challenge_methods_supported?: string[];
-  scopes_supported?: string[];
-  response_types_supported?: string[];
-  grant_types_supported?: string[];
-  authorization_response_iss_parameter_supported?: boolean;
-  [key: string]: unknown;
-}
-
 interface PKCEPair {
   verifier: string;
   challenge: string;
