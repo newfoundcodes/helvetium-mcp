@@ -1,4 +1,10 @@
-# Helvetium MCP
+<div align="center">
+  <img src="https://github.com/newfoundcodes/newfoundcodes-logo/blob/main/newfoundcodes-helvetium.png?raw=true" width="128" />
+  <h1>Helvetium MCP</h1>
+  <p>
+    <a href="https://github.com/newfoundcodes/helvetium-mcp/actions"><img src="https://github.com/newfoundcodes/helvetium-mcp/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
+  </p>
+</div>
 
 Standalone TypeScript implementation of Model Context Protocol **2026-07-28**. It is designed to let AI agents communicate with Helvetium Boot services or any Fetch/stdin-stdout host without importing the official MCP SDK.
 
