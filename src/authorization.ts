@@ -23,6 +23,7 @@
  */
 
 import { randomUUID } from './util.js';
+import type { AuthorizationServerMetadata } from './types/public.js';
 
 function base64url(bytes: Uint8Array): string {
   let raw = '';
