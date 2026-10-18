@@ -25,6 +25,7 @@
 import { MCPError, errorResponse } from '../errors.js';
 import { isJSONRPCNotification, isJSONRPCRequest } from '../protocol.js';
 import type { MCPServer } from '../server.js';
+import type { LineReadable, LineWritable } from '../types/public.js';
 
 function line(value: unknown): string {
   return JSON.stringify(value) + '\n';
