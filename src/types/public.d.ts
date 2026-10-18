@@ -22,22 +22,4 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-interface AuthorizationServerMetadata {
-  issuer: string;
-  authorization_endpoint: string;
-  token_endpoint: string;
-  registration_endpoint?: string;
-  code_challenge_methods_supported?: string[];
-  scopes_supported?: string[];
-  response_types_supported?: string[];
-  grant_types_supported?: string[];
-  authorization_response_iss_parameter_supported?: boolean;
-  [key: string]: unknown;
-}
-
-interface LineReadable extends AsyncIterable<string | Uint8Array> {}
-
-interface LineWritable {
-  write(chunk: string | Uint8Array): unknown;
-  end?(): unknown;
-}
+export type { AuthorizationServerMetadata, LineReadable, LineWritable } from './public.js';
